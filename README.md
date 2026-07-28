@@ -68,3 +68,6 @@ Client bilgisayarda:
    
         sudo curl -sSL https://raw.githubusercontent.com/IntelRealSense/librealsense/master/config/99-realsense-libusb.rules -o /etc/udev/rules.d/99-realsense-libusb.rules
         sudo udevadm control --reload-rules && sudo udevadm trigger
+
+
+### PUSHUP buton Bağlantısı
