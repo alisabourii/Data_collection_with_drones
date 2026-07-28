@@ -70,4 +70,23 @@ Client bilgisayarda:
         sudo udevadm control --reload-rules && sudo udevadm trigger
 
 
+### Test Başlatması için: 
+
+kameranın hazırolması için:(Serverde çalışacak)
+		
+		ros2 launch realsense2_camera rs_launch.py
+
+butonun tetikte beklemesi için:(Serverde çalışacak)
+
+		source ~/ros2_ws/install/setup.bash
+		ros2 run camera_capture button_bag_recorder
+	
+Tüm kayıtları getirmesi için:(Kendi bilgisayarımızda çalışacak)
+		
+		scp -r ubuntu@192.168.1.197:~/realsense_bag_* ~/Desktop/
+Belirli bir kaydın getirlilmesi için :
+
+		scp -r ubuntu@192.168.1.197:~/realsense_bag_20260728_154950 ~/Desktop/
+
+
 ### PUSHUP buton Bağlantısı
