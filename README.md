@@ -1,6 +1,19 @@
 # Data_collection_with_drones
 Data collection with drones, use ıntel realense, ROS2 and raspberry pi5
 
+### Raspberry Pi5(Ubuntu Server) Remote Bağlanmak:
+Raspberry Pi5 Terminalinda:(Server)
+
+	sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
+	açılan dosyada : "PasswordAuthentication no" bulup "PasswordAuthentication yes" şeklinde değiştireceğiz.
+	 sudo systemctl restart ssh
+	 
+Client bilgisayarda:
+	
+	ssh ubuntu@192.168.x.xx(x.xx-> serverde=> hostname -I)
+
+
+
 ### Kurulum rehberi:
 
 1.Sistem hazırlığı
