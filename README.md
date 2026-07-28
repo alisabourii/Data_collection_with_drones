@@ -17,7 +17,9 @@ Client bilgisayarda:
 ### Kurulum rehberi:
 
 1.Sistem hazırlığı
-	# Sistem paketlerini güncelle
+
+Sistem paketlerini güncelle
+
 	sudo apt update && sudo apt upgrade -y
 
 	# Locale ayarlarını yap
