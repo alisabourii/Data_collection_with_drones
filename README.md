@@ -5,7 +5,7 @@ Data collection with drones, use ıntel realense, ROS2 and raspberry pi5
 Raspberry Pi5 Terminalinda:(Server)
 
 	sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
-	açılan dosyada : "PasswordAuthentication no" bulup "PasswordAuthentication yes" şeklinde değiştireceğiz.
+	açılan dosyada : "PasswordAuthentication no" yerine "PasswordAuthentication yes" yazacağız.
 	 sudo systemctl restart ssh
 	 
 Client bilgisayarda:
@@ -68,7 +68,7 @@ Sistem paketlerini güncelle
     
 7. Adım: USB Yetkilerini tanımlama:
    
-        sudo curl -sSL https://raw.githubusercontent.com/IntelRealSense/librealsense/master/config/99-realsense-libusb.rules -o /etc/udev/rules.d/99-realsense-libusb.rules
+   		sudo curl -sSL https://raw.githubusercontent.com/IntelRealSense/librealsense/master/config/99-realsense-libusb.rules -o /etc/udev/rules.d/99-realsense-libusb.rules
         sudo udevadm control --reload-rules && sudo udevadm trigger
 
 
@@ -76,16 +76,16 @@ Sistem paketlerini güncelle
 
 kameranın hazırolması için:(Serverde çalışacak)
 		
-		ros2 launch realsense2_camera rs_launch.py
+	ros2 launch realsense2_camera rs_launch.py
 
 butonun tetikte beklemesi için:(Serverde çalışacak)
 
-		source ~/ros2_ws/install/setup.bash
-		ros2 run camera_capture button_bag_recorder
+	source ~/ros2_ws/install/setup.bash
+	ros2 run camera_capture button_bag_recorder
 			
 Belirli bir kaydın getirlilmesi için :
 
-		scp -r ubuntu@192.168.1.197:~/realsense_bag_20260728_154950 ~/Masaüstü/
+	scp -r ubuntu@192.168.1.197:~/realsense_bag_20260728_154950 ~/Masaüstü/
 
 .Bag kayıtlarımızı indirmek için:
 
@@ -93,7 +93,7 @@ Belirli bir kaydın getirlilmesi için :
 
 .Bag kayıtlarımıza silmek için(Server):
 
-		rm -rf ~/realsense_bag_*
+	rm -rf ~/realsense_bag_*
 
 ## PUSHUP buton Bağlantısı
 
