@@ -1,7 +1,7 @@
-# Data_collection_with_drones
+### Data_collection_with_drones
 Data collection with drones, use ıntel realense, ROS2 and raspberry pi5
 
-### Raspberry Pi5(Ubuntu Server) Remote Bağlanmak:
+## Raspberry Pi5(Ubuntu Server) Remote Bağlanmak:
 Raspberry Pi5 Terminalinda:(Server)
 
 	sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
@@ -14,7 +14,7 @@ Client bilgisayarda:
 
 
 
-### Kurulum rehberi:
+## Kurulum rehberi:
 
 1.Sistem hazırlığı
 
@@ -72,7 +72,7 @@ Sistem paketlerini güncelle
         sudo udevadm control --reload-rules && sudo udevadm trigger
 
 
-### Test Başlatması için: 
+## Test Başlatması için: 
 
 kameranın hazırolması için:(Serverde çalışacak)
 		
