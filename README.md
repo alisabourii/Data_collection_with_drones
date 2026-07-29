@@ -91,8 +91,12 @@ Belirli bir kaydın getirlilmesi için :
 
 	scp -r ubuntu@192.168.1.197:~/realsense_bag_* ~/Masaüstü/
 
-.bag kayıtlarımıza silmek için(Server):
+.Bag kayıtlarımıza silmek için(Server):
 
 		rm -rf ~/realsense_bag_*
 
-### PUSHUP buton Bağlantısı
+## PUSHUP buton Bağlantısı
+
+#### Katot(-) -> GND
+
+#### Anot(+)  -> GPIO18
