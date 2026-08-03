@@ -100,6 +100,8 @@ Dosya: nano ~/ros2_ws/src/camera_capture/camera_capture/button_bag_recorder.py
 
 #### Anot(+)  -> GPIO18
 
+---
+
 ## GPS Entegrasyonu:
 
 ## 🛠️ Donanım Bağlantıları
