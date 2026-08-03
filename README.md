@@ -97,6 +97,8 @@ Belirli bir kaydın getirlilmesi için :
 
 ## PUSHUP buton Bağlantısı
 
+Dosya: nano ~/ros2_ws/src/camera_capture/camera_capture/button_bag_recorder.py
+
 #### Katot(-) -> GND
 
 #### Anot(+)  -> GPIO18
