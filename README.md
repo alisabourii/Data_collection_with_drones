@@ -102,3 +102,31 @@ Dosya: nano ~/ros2_ws/src/camera_capture/camera_capture/button_bag_recorder.py
 #### Katot(-) -> GND
 
 #### Anot(+)  -> GPIO18
+
+## GPS Entegrasyonu:
+
+## 🛠️ Donanım Bağlantıları
+
+### GPS Modülü Bağlantı Şeması
+
+U-blox NEO-M8N modülünün dahili LDO voltaj regülatöründen dolayı kararlı çalışması için **5V besleme** kullanılmıştır.
+
+| NEO-M8N Pin | Raspberry Pi 5 Fiziksel Pin | Açıklama |
+| :--- | :--- | :--- |
+| **VCC** | Pin 2 / Pin 4 | 5V Güç Beslemesi |
+| **GND** | Pin 6 (veya herhangi bir GND) | Toprak |
+| **TX** | Pin 10 (GPIO 15 / RXD0) | Pi RX (Alıcı) |
+| **RX** | Pin 8 (GPIO 14 / TXD0) | Pi TX (Verici) |
+
+---
+
+## ⚙️ Sistem & Çekirdek (Kernel) Yapılandırması
+
+Raspberry Pi 5'in yeni RP1 I/O entegresinde UART DMA kilitlenmelerini (`dmachan2 is non-idle!`) ve kernel terminal çakışmalarını önlemek için yapılan ayarlar:
+
+### 1. `/boot/firmware/config.txt`
+UART0 modülünü aktifleştirip DMA kullanımını kapatın:
+```ini
+enable_uart=1
+dtoverlay=uart0-pi5,dma=off```
+
