@@ -1,6 +1,3 @@
-### Data_collection_with_drones
-Data collection with drones, use ıntel realense, ROS2 and raspberry pi5
-
 ## Raspberry Pi5(Ubuntu Server) Remote Bağlanmak:
 Raspberry Pi5 Terminalinda:(Server)
 
