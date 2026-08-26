@@ -2,7 +2,9 @@
 Raspberry Pi5 Terminalinda:(Server)
 
 	sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
-	açılan dosyada : "PasswordAuthentication no" yerine "PasswordAuthentication yes" yazacağız.
+açılan dosyada : "PasswordAuthentication no" 
+yerine "PasswordAuthentication yes" yazacağız.
+
 	 sudo systemctl restart ssh
 	 
 Client bilgisayarda:
